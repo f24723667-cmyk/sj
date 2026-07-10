@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "last_sync": "2026-07-10T20:11:42.235524",
+  "mappings": {
+    "daily_logs": {
+      "2026-07-03": {
+        "wukong_path": "work_logs/2026-07-03.md",
+        "dingtalk_node_id": "14lgGw3P8vvOePMpig2v92p285daZ90D",
+        "dingtalk_url": "https://alidocs.dingtalk.com/i/nodes/14lgGw3P8vvOePMpig2v92p285daZ90D",
+        "obsidian_path": "Daily Notes/2026-07-03.md",
+        "last_modified_wukong": "2026-07-05T08:32:47",
+        "last_modified_dingtalk": "2026-07-10T20:11:26.939732",
+        "last_modified_obsidian": null,
+        "sync_status": "synced"
+      },
+      "2026-07-04": {
+        "wukong_path": "work_logs/2026-07-04.md",
+        "dingtalk_node_id": "a9E05BDRVQ6xAGwaTD9gvG2eJ63zgkYA",
+        "dingtalk_url": "https://alidocs.dingtalk.com/i/nodes/a9E05BDRVQ6xAGwaTD9gvG2eJ63zgkYA",
+        "obsidian_path": "Daily Notes/2026-07-04.md",
+        "last_modified_wukong": "2026-07-05T08:06:46",
+        "last_modified_dingtalk": "2026-07-10T20:11:28.918232",
+        "last_modified_obsidian": null,
+        "sync_status": "synced"
+      },
+      "2026-07-05": {
+        "wukong_path": "work_logs/2026-07-05.md",
+        "dingtalk_node_id": "EpGBa2Lm8azgoyDlTw5am0GGWgN7R35y",
+        "dingtalk_url": "https://alidocs.dingtalk.com/i/nodes/EpGBa2Lm8azgoyDlTw5am0GGWgN7R35y",
+        "obsidian_path": "Daily Notes/2026-07-05.md",
+        "last_modified_wukong": "2026-07-05T11:33:58",
+        "last_modified_dingtalk": "2026-07-10T20:11:30.830772",
+        "last_modified_obsidian": null,
+        "sync_status": "synced"
+      },
+      "2026-07-06": {
+        "wukong_path": "work_logs/2026-07-06.md",
+        "dingtalk_node_id": "r1R7q3QmWe7kO2NGiN9rR3aoJxkXOEP2",
+        "dingtalk_url": "https://alidocs.dingtalk.com/i/nodes/r1R7q3QmWe7kO2NGiN9rR3aoJxkXOEP2",
+        "obsidian_path": "Daily Notes/2026-07-06.md",
+        "last_modified_wukong": "2026-07-06T20:01:33",
+        "last_modified_dingtalk": "2026-07-10T20:11:32.732851",
+        "last_modified_obsidian": null,
+        "sync_status": "synced"
+      },
+      "2026-07-09": {
+        "wukong_path": "work_logs/2026-07-09.md",
+        "dingtalk_node_id": "2Amq4vjg89g4PnLBumLNeReDV3kdP0wQ",
+        "dingtalk_url": "https://alidocs.dingtalk.com/i/nodes/2Amq4vjg89g4PnLBumLNeReDV3kdP0wQ",
+        "obsidian_path": "Daily Notes/2026-07-09.md",
+        "last_modified_wukong": "2026-07-09T21:15:59",
+        "last_modified_dingtalk": "2026-07-10T20:11:34.828557",
+        "last_modified_obsidian": null,
+        "sync_status": "synced"
+      }
+    },
+    "weekly_summaries": {
+      "2026-W28": {
+        "wukong_path": "weekly_summaries/2026-W28_周总结.md",
+        "dingtalk_node_id": "NZQYprEoWoeR2w7Dc0Eq5BkkJ1waOeDk",
+        "dingtalk_url": "https://alidocs.dingtalk.com/i/nodes/NZQYprEoWoeR2w7Dc0Eq5BkkJ1waOeDk?utm_scene=team_space",
+        "obsidian_path": "Weekly Reviews/2026-W28.md",
+        "last_modified_wukong": null,
+        "last_modified_dingtalk": "2025-10-09T00:00:00+08:00",
+        "last_modified_obsidian": null,
+        "sync_status": "exists_in_dingtalk_only"
+      },
+      "README": {
+        "wukong_path": "weekly_summaries/README.md",
+        "dingtalk_node_id": null,
+        "dingtalk_url": null,
+        "obsidian_path": "Weekly Reviews/README.md",
+        "last_modified_wukong": "2026-07-04T11:06:08",
+        "sync_status": "pending"
+      }
+    },
+    "monthly_summaries": {}
+  },
+  "sync_rules": {
+    "auto_push_to_dingtalk": true,
+    "auto_pull_from_dingtalk": true,
+    "obsidian_sync_method": "git",
+    "conflict_resolution": "newest_wins"
+  }
+}
