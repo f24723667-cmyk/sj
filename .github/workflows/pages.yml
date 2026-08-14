@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - site.zip
+      - index.html
+      - 404.html
+      - 门店形象HTML版_assets/**
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -29,11 +31,8 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          # Windows-created ZIP files may make Info-ZIP return warning code 1
-          # even though every file was extracted correctly.
-          unzip -q site.zip -d _site || true
-          test -f _site/index.html
-          test "$(find _site -type f | wc -l)" -gt 100
+          cp index.html 404.html _site/
+          cp -r "门店形象HTML版_assets" _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact

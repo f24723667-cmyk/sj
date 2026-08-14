@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>门店形象 6.0｜图文标准手册</title>
+  <style>
+    :root{
+      --ink:#17201d;--muted:#64706a;--line:#dfe6e2;--paper:#fff;--wash:#f4f7f5;
+      --green:#21b354;--orange:#f37335;--red:#e60012;--dark:#13251d;
+      --shadow:0 18px 48px rgba(25,55,42,.10);--radius:20px;--brand:#1f8f4b;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--wash);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;line-height:1.68}
+    a{color:inherit}.shell{width:min(1200px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .topbar .shell{min-height:68px;display:flex;align-items:center;gap:22px}
+    .logo{font-weight:900;letter-spacing:.04em;white-space:nowrap}.logo i{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--brand);margin-right:9px}
+    nav{display:flex;gap:5px;overflow:auto;scrollbar-width:none;flex:1}nav a{text-decoration:none;padding:8px 11px;border-radius:999px;color:#53605a;font-size:13px;white-space:nowrap}nav a:hover{background:#eef4f0;color:#15221c}
+    button{font:inherit}.print{border:0;background:#183a2b;color:#fff;border-radius:999px;padding:9px 16px;cursor:pointer;white-space:nowrap}
+    .hero{padding:54px 0 28px;background:radial-gradient(circle at 82% 18%,rgba(33,179,84,.16),transparent 26%),radial-gradient(circle at 72% 65%,rgba(243,115,53,.11),transparent 30%),linear-gradient(135deg,#fff 0%,#eff7f2 100%);border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.55fr .75fr;gap:34px;align-items:end}.eyebrow{color:var(--brand);font-size:13px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(34px,5vw,62px);line-height:1.08;margin:12px 0 18px;letter-spacing:-.04em}.lead{max-width:760px;font-size:18px;color:#53605a;margin:0}
+    .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{background:rgba(255,255,255,.8);border:1px solid #dce7e0;border-radius:18px;padding:18px}.stat strong{font-size:30px;display:block;line-height:1.1}.stat span{font-size:13px;color:var(--muted)}
+    .brandbar{display:flex;align-items:center;gap:10px;margin-top:27px;flex-wrap:wrap}.brandbar b{font-size:13px}.brand-btn{border:1px solid #cfd9d3;background:#fff;color:#425149;border-radius:999px;padding:8px 15px;cursor:pointer}.brand-btn.active{background:var(--brand);border-color:var(--brand);color:#fff}
+    main{padding:28px 0 70px}.chapter{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,4vw,42px);margin:22px 0;box-shadow:0 10px 35px rgba(27,55,43,.04)}
+    .chapter-head{display:grid;grid-template-columns:72px 1fr;gap:20px;align-items:start;margin-bottom:26px}.num{font-size:13px;font-weight:900;color:var(--brand);border-top:3px solid var(--brand);padding-top:8px}.chapter h2{font-size:clamp(27px,3vw,39px);line-height:1.2;margin:0 0 8px}.chapter-head p{margin:0;color:var(--muted);max-width:820px}
+    h3{font-size:20px;margin:0 0 13px}h4{font-size:15px;margin:0 0 8px}.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{border:1px solid var(--line);border-radius:16px;padding:19px;background:#fff}.card.soft{background:#f7faf8}.card p,.card ul{margin:0;color:#526059;font-size:14px}.card ul{padding-left:18px}.card li+li{margin-top:5px}.accent{border-top:4px solid var(--brand)}
+    .tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:800;margin:0 5px 5px 0}.must{background:#e8f6ed;color:#16773a}.recommend{background:#fff0e8;color:#a64920}.need{background:#eef1f4;color:#58626a}.diff{background:#fff3cd;color:#775d04}
+    .matrix{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;font-size:14px}.matrix th,.matrix td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.matrix th{background:#eff5f1;font-size:13px}.matrix tr:last-child td{border-bottom:0}.matrix td:first-child{font-weight:750}.yes{color:#16833f;font-weight:900}.rec{color:#c55f2a;font-weight:900}
+    .visual{margin:20px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#f7f8f7}.visual img{display:block;width:100%;height:auto}.caption{padding:10px 14px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+    .key-visuals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0}.key-visuals.three{grid-template-columns:repeat(3,minmax(0,1fr))}.key-visuals figure{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#f7f9f8}.image-button{display:block;width:100%;padding:0;border:0;background:#eef2ef;cursor:zoom-in}.image-button img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}.key-visuals figcaption,.thumb-card figcaption{padding:10px 13px;color:#536059;font-size:12px;background:#fff;border-top:1px solid var(--line)}
+    .source-gallery{margin-top:18px;background:#f8faf9}.source-gallery summary{font-size:15px;color:#29483a}.source-gallery summary small{font-weight:500;color:var(--muted);margin-left:8px}.thumb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:15px;border-top:1px solid var(--line)}.thumb-card{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}.thumb-card .image-button img{aspect-ratio:16/9}.gallery-hint{margin:0;padding:0 16px 14px;color:var(--muted);font-size:12px}
+    dialog.lightbox{width:min(94vw,1500px);max-height:94vh;border:0;border-radius:18px;padding:0;background:#111;box-shadow:0 30px 90px rgba(0,0,0,.5)}dialog.lightbox::backdrop{background:rgba(8,12,10,.84)}.lightbox img{display:block;max-width:94vw;max-height:84vh;margin:auto;object-fit:contain}.lightbox p{margin:0;color:#fff;padding:12px 55px 14px;text-align:center;font-size:13px}.lightbox-close{position:absolute;right:12px;top:10px;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:#111;font-size:25px;line-height:1;cursor:pointer}
+    .brand-card{position:relative;overflow:hidden}.swatch{height:54px;border-radius:12px;margin:8px 0 14px}.swatches{display:grid;grid-template-columns:1fr 1fr;gap:9px}.color-code{font-family:Consolas,monospace;font-size:12px;color:var(--muted)}
+    .timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;counter-reset:step}.timeline span{counter-increment:step;min-height:75px;border:1px solid var(--line);background:#fafcfb;border-radius:12px;padding:11px 10px;font-size:13px}.timeline span:before{content:counter(step,decimal-leading-zero);display:block;color:var(--brand);font-weight:900;font-size:11px;margin-bottom:4px}
+    details{border:1px solid var(--line);border-radius:14px;background:#fff;margin:10px 0;overflow:hidden}summary{cursor:pointer;font-weight:850;padding:15px 18px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--brand)}details[open] summary:after{content:"－"}.detail-body{border-top:1px solid var(--line);padding:16px 18px;color:#4f5d56;font-size:14px}.detail-body ul{margin:0;padding-left:20px}.detail-body li+li{margin-top:7px}
+    .notice{background:#fff8e8;border:1px solid #f0d992;border-left:5px solid #d8a900;border-radius:14px;padding:16px 18px;color:#66531b;font-size:14px;margin-top:16px}.note{background:#edf7f1;border-left:5px solid var(--brand);border-radius:14px;padding:16px 18px;color:#365448;font-size:14px}
+    .spec{font-variant-numeric:tabular-nums}.brand-only{display:block}body[data-brand="left"] .brand-only[data-brand]:not([data-brand="left"]),body[data-brand="life"] .brand-only[data-brand]:not([data-brand="life"]){display:none}
+    .source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px;padding:0;margin:0;counter-reset:source;list-style:none}.source-list li{counter-increment:source;border-bottom:1px dashed #d9e0dc;padding:9px 0;font-size:13px}.source-list li:before{content:counter(source,decimal-leading-zero);font:700 11px Consolas;color:var(--brand);margin-right:10px}
+    .footer{padding:30px 0 50px;color:#6c7771;font-size:13px}.footer .shell{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px}
+    .mini{font-size:12px;color:var(--muted)}.nowrap{white-space:nowrap}.divider{height:1px;background:var(--line);margin:25px 0}
+    @media(max-width:850px){.hero-grid,.g2,.g3,.g4,.key-visuals,.key-visuals.three{grid-template-columns:1fr}.thumb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-stats{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:repeat(3,1fr)}.chapter-head{grid-template-columns:1fr}.num{width:54px}.topbar .shell{width:100%;padding:0 14px}.logo{display:none}.source-list{grid-template-columns:1fr}.matrix{display:block;overflow:auto}.print{display:none}}
+    @media(max-width:520px){.shell{width:min(100% - 24px,1200px)}.hero{padding-top:36px}.hero-stats{grid-template-columns:1fr 1fr}.stat{padding:14px}.timeline{grid-template-columns:repeat(2,1fr)}.thumb-grid{grid-template-columns:1fr}.chapter{padding:20px 16px}}
+    @media print{.topbar,.brandbar,.print{display:none!important}body{background:#fff}.shell{width:100%}.hero{padding:25px 0}.chapter{box-shadow:none;break-inside:avoid;margin:12px 0}.chapter,details{border-color:#cfd5d2}details{break-inside:avoid}details:not([open]) .detail-body{display:block}.footer{padding-bottom:0}}
+  </style>
+</head>
+<body data-brand="all">
+  <header class="topbar">
+    <div class="shell">
+      <div class="logo"><i></i>门店形象 6.0</div>
+      <nav aria-label="章节导航">
+        <a href="#overview">总览</a><a href="#vi">品牌视觉</a><a href="#signage">招牌导视</a><a href="#construction">装修施工</a><a href="#space">店内空间</a><a href="#ads">广告</a><a href="#equipment">设备</a><a href="#exceptions">特殊情形</a><a href="#sources">资料来源</a>
+      </nav>
+      <button class="print" onclick="window.print()">打印 / 导出 PDF</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">Store Image Standards · 2026</div>
+        <h1>门店形象 6.0<br>图文标准手册</h1>
+        <p class="lead">集中展示左邻右舍、生活驿站两套门店标准，覆盖品牌视觉、招牌导视、装修施工、空间设计、广告与设备配置。用于设计、采购、工程和运营执行时统一查阅。</p>
+        <div class="brandbar" aria-label="品牌筛选">
+          <b>查看品牌：</b>
+          <button class="brand-btn active" data-filter="all">全部标准</button>
+          <button class="brand-btn" data-filter="left">左邻右舍</button>
+          <button class="brand-btn" data-filter="life">生活驿站</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>2</strong><span>品牌体系</span></div>
+        <div class="stat"><strong>15</strong><span>份原始标准文件</span></div>
+        <div class="stat"><strong>180+</strong><span>原标准示例页</span></div>
+        <div class="stat"><strong>2026</strong><span>当前资料年度</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="shell">
+    <section class="chapter" id="overview">
+      <div class="chapter-head"><div class="num">01 / 总览</div><div><h2>标准体系与使用口径</h2><p>页面把不同格式的标准文件合并成一个可浏览入口。标签仅用于区分基础配置、推荐配置与条件配置。</p></div></div>
+      <div class="g3 grid">
+        <article class="card accent"><span class="tag must">必须配置</span><h3>标准版基础项</h3><p>两份新增《装修施工规范》中的标准版配置表，以“√”明确为基础配置；设计、采购与施工按对应章节执行。</p></article>
+        <article class="card accent"><span class="tag recommend">推荐配置</span><h3>体验提升项</h3><p>配置表中以“○”标注的建议方案，例如标准版自动门。是否采用仍应结合现场条件与项目审批。</p></article>
+        <article class="card accent"><span class="tag need">按需 / 授权</span><h3>条件触发项</h3><p>广告内容、驱虫灯、迎宾器、排风等，需要结合门店业态、场地或总部授权，不作为所有门店的固定组合。</p></article>
+      </div>
+      <div class="visual"><img src="门店形象HTML版_assets/标准版配置.png" alt="标准版门店外部形象配置表"><div class="caption">原标准图示｜标准版门店外部形象配置</div></div>
+      <div class="visual"><img src="门店形象HTML版_assets/店内硬装配置.png" alt="标准版店内硬装配置表"><div class="caption">原标准图示｜标准版门店内部硬装配置</div></div>
+      <h3 style="margin-top:26px">标准版基础配置</h3>
+      <table class="matrix">
+        <thead><tr><th>区域</th><th>项目</th><th>属性</th><th>标准摘要</th></tr></thead>
+        <tbody>
+          <tr><td>门店外部</td><td>吸塑招牌、小灯箱、平推门/地弹簧门、橱窗、门牌、门条、门柱、挑檐、外立面广告管理</td><td class="yes">必须</td><td>招牌及标准物料按公司统一版本；外立面除审批广告外不得另设内容。</td></tr>
+          <tr><td>门店外部</td><td>自动门</td><td class="rec">推荐</td><td>作为标准版体验提升方案；采用时仍需执行门体、玻璃、尺寸及机组安装标准。</td></tr>
+          <tr><td>店内硬装</td><td>墙面、防撞板、腰线、地砖、吊顶、空调与音响、冷链排水、强弱电、配电箱</td><td class="yes">必须</td><td>墙面只保留标准腰线、指定广告及证照框；线路隐藏，设备分路控制。</td></tr>
+          <tr><td>店内形象</td><td>收银吊顶、背景墙、灯光、水排水、广告标识、冷链封包、广告框</td><td class="yes">必须</td><td>按标准图纸和统一配发物料实施；实际尺寸结合现场复尺。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="chapter" id="vi">
+      <div class="chapter-head"><div class="num">02 / VI</div><div><h2>品牌视觉基础</h2><p>标志、色彩、字体与品牌组合不得随意拉伸、变形、换色或重新排版。门店使用时以对应品牌文件为准。</p></div></div>
+      <div class="g2 grid">
+        <article class="card brand-card brand-only" data-brand="left"><span class="tag must">左邻右舍</span><h3>红 · 黑 · 白</h3><div class="swatch" style="background:#e60012"></div><div class="color-code">品牌主红 HEX #E60012</div><p style="margin-top:12px">门店腰线采用品牌红。中文标准字体体系以江城圆体系列为主，正文及辅助信息按 VI 规范中的指定字重使用。</p></article>
+        <article class="card brand-card brand-only" data-brand="life"><span class="tag must">生活驿站</span><h3>绿 · 橙 · 白</h3><div class="swatches"><div class="swatch" style="background:#21b354"></div><div class="swatch" style="background:#f37335"></div></div><div class="color-code">品牌绿 #21B354　品牌橙 #F37335</div><p style="margin-top:12px">门店腰线采用品牌绿。字体按 VI 中的思源黑体、思源宋体及相应指定字重执行。</p></article>
+      </div>
+      <div class="key-visuals">
+        <figure class="brand-only" data-brand="left"><button class="image-button" data-full="门店形象HTML版_assets/examples/vi-left-3.webp" data-caption="左邻右舍｜品牌概述与夜间门店形象"><img loading="lazy" src="门店形象HTML版_assets/examples/vi-left-3.webp" alt="左邻右舍品牌概述与夜间门店形象"></button><figcaption>左邻右舍｜品牌概述与夜间门店形象</figcaption></figure>
+        <figure class="brand-only" data-brand="life"><button class="image-button" data-full="门店形象HTML版_assets/examples/vi-life-2.webp" data-caption="生活驿站｜品牌概述与夜间门店形象"><img loading="lazy" src="门店形象HTML版_assets/examples/vi-life-2.webp" alt="生活驿站品牌概述与夜间门店形象"></button><figcaption>生活驿站｜品牌概述与夜间门店形象</figcaption></figure>
+      </div>
+      <div class="g3 grid" style="margin-top:16px">
+        <article class="card soft"><h4>标志使用</h4><p>优先使用标准彩色版；背景复杂时选择规范允许的反白或单色形式，并保证安全空间和清晰度。</p></article>
+        <article class="card soft"><h4>比例与组合</h4><p>不得压扁、拉长、旋转、加描边或自行拆分；品牌标志与文字组合保持原文件比例和间距。</p></article>
+        <article class="card soft"><h4>制作文件</h4><p>输出前核对色值、字体、材质与工艺。招牌、门牌、广告框等统一物料优先使用总部提供的生产文件。</p></article>
+      </div>
+      <details class="source-gallery brand-only" data-brand="left" data-gallery="vi-left"><summary>展开左邻右舍 VI 原页图例 <small>标志、色彩、字体与应用示例 · 8 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">点击任一原页可放大查看。</p></details>
+      <details class="source-gallery brand-only" data-brand="life" data-gallery="vi-life"><summary>展开生活驿站 VI 原页图例 <small>品牌个性、标志、色彩与图形 · 11 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">点击任一原页可放大查看。</p></details>
+    </section>
+
+    <section class="chapter" id="signage">
+      <div class="chapter-head"><div class="num">03 / 招牌</div><div><h2>招牌、门头与外立面导视</h2><p>招牌是门店第一识别面。按建筑条件选择适用结构和发光形式，品牌主标居中、同一展示面只设一组主标。</p></div></div>
+      <div class="key-visuals">
+        <figure class="brand-only" data-brand="left"><button class="image-button" data-full="门店形象HTML版_assets/examples/sign-left-3.webp" data-caption="左邻右舍｜常规门店完整外立面示例"><img loading="lazy" src="门店形象HTML版_assets/examples/sign-left-3.webp" alt="左邻右舍常规门店完整外立面示例"></button><figcaption>左邻右舍｜常规门店完整外立面示例</figcaption></figure>
+        <figure class="brand-only" data-brand="life"><button class="image-button" data-full="门店形象HTML版_assets/examples/sign-life-3.webp" data-caption="生活驿站｜常规门店完整外立面示例"><img loading="lazy" src="门店形象HTML版_assets/examples/sign-life-3.webp" alt="生活驿站常规门店完整外立面示例"></button><figcaption>生活驿站｜常规门店完整外立面示例</figcaption></figure>
+      </div>
+      <div class="visual"><img src="门店形象HTML版_assets/招牌类型示意.png" alt="招牌发光形式示意"><div class="caption">类型示意｜吸塑招牌、3M 灯箱布招牌、发光字招牌按现场门头条件选用</div></div>
+      <div class="g3 grid" style="margin-top:18px">
+        <article class="card"><h3>主标与副标</h3><ul><li>品牌主标设置在入口上方并居中；同一展示面只设置一组主标。</li><li>常规门头总高约 <b class="spec">2900 mm</b>。</li><li class="brand-only" data-brand="left">左邻右舍主标参考 <b>2000 × 1000 mm</b>。</li><li class="brand-only" data-brand="life">生活驿站主标参考 <b>1000 × 1000 mm</b>。</li><li>副标参考高度 <b>800 mm</b>，按标准顺序排列。</li></ul></article>
+        <article class="card"><h3>基层与饰面</h3><ul><li>骨架可用 ≥1.5 mm、20×40 镀锌方管，或 ≥1.8 mm、30×30 镀锌角钢。</li><li>饰面采用 4 mm 吉祥牌工行灰铝塑板。</li><li>竖向龙骨中心距 560–760 mm，横向约 580 mm。</li><li>面板留缝 5 ±1 mm；焊点防锈，完成面平整、对称。</li></ul></article>
+        <article class="card"><h3>照明与小灯箱</h3><ul><li>招牌下照明灯间距 800–1200 mm。</li><li>防水灯参考 20W / 5000K / 1800 lm，地面照度 500 lux。</li><li>标准版小灯箱为统一配发基础项；类型与发布内容仍须按门店位置和总部授权。</li></ul></article>
+      </div>
+      <details open><summary>悬挑门头与防水挑檐</summary><div class="detail-body"><ul><li>悬浮底架可用 0.5 mm、50 系轻钢龙骨配 4 mm 铝塑板；主龙骨间距不大于 1000 mm，副龙骨不大于 600 mm，吊杆不大于 1000 mm，完成面平整度控制在 ±3 mm。</li><li>PVC 树脂瓦厚 2.5 mm，搭接 60–80 mm，坡度 20–40°，檩条间距不大于 660 mm，外挑 200–250 mm，前沿平整度 ±5 mm。</li><li>铝塑板挑檐使用 30×40 镀锌方管及 4 mm 铝塑板，外挑 200–250 mm，坡度 20–40°，骨架间距 400–600 mm。</li></ul></div></details>
+      <details><summary>门柱、橱窗与门体</summary><div class="detail-body"><ul><li>门柱饰面：20×30 木方、9 mm 夹板、3 mm 吉祥白银灰铝塑板；有消防要求时使用阻燃板。分格单块宽度不小于 500 mm，板缝 5 ±1 mm，平整度 ±3 mm，对缝偏差 ±0.5 mm。</li><li>平推门 / 地弹簧门：12 mm 钢化玻璃，202 不锈钢，门框 50×50 mm，拉手 30×30×1200 mm；单门宽 900 mm，双门总宽 1600 mm，门框高 2200 mm；玻璃右下角保留 3C 标识。</li><li>自动门采用同等级 12 mm 钢化玻璃和对应框体尺寸，每樘门配一套驱动系统；标准版属性为“推荐”。</li><li>橱窗玻璃必须为钢化玻璃，广告只粘贴经授权内容。</li></ul></div></details>
+      <details><summary>门条、门牌与墙面腰线</summary><div class="detail-body"><ul><li>门条下沿距地约 1000 mm，条高 100 mm，透明 UV 工艺。</li><li>门牌参考 300×300 mm，按导视图纸确定与招牌、门条关系；推 / 拉标识位于门条上方、靠近把手位置。</li><li class="brand-only" data-brand="left">左邻右舍门条文字参考 40 mm，墙面腰线宽 80 mm、品牌红。</li><li class="brand-only" data-brand="life">生活驿站门条文字参考 60 mm，墙面腰线宽 80 mm、品牌绿。</li></ul></div></details>
+      <details class="source-gallery brand-only" data-brand="left" data-gallery="sign-left"><summary>展开左邻右舍招牌原页图册 <small>门面标注、吸塑、3M、发光字与特殊商圈 · 10 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">包含尺寸关系、安装组合和实景示例。</p></details>
+      <details class="source-gallery brand-only" data-brand="life" data-gallery="sign-life"><summary>展开生活驿站招牌原页图册 <small>门面标注、吸塑、3M、发光字与特殊商圈 · 10 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">包含尺寸关系、安装组合和实景示例。</p></details>
+    </section>
+
+    <section class="chapter" id="construction">
+      <div class="chapter-head"><div class="num">04 / 施工</div><div><h2>装修施工流程与通用工艺</h2><p>新增的两份《装修施工规范》已纳入本章。先完成条件核实和复尺，再进入围挡、拆除、消防、水电、饰面与设备配合。</p></div></div>
+      <div class="timeline"><span>工程条件核实</span><span>围挡安装</span><span>现场拆除</span><span>隔墙施工</span><span>消防改造</span><span>水电铺设</span><span>地砖铺设</span><span>吊顶制作</span><span>墙面施工</span><span>现场复尺</span><span>工程复核</span><span>现场清理</span></div>
+      <div class="visual"><img src="门店形象HTML版_assets/装修流程.png" alt="装修施工流程图"><div class="caption">原标准图示｜装修施工主流程</div></div>
+      <div class="key-visuals three">
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/construction-7.webp" data-caption="施工规范｜标准门店设施编号与对应位置"><img loading="lazy" src="门店形象HTML版_assets/examples/construction-7.webp" alt="标准门店设施编号与对应位置"></button><figcaption>设施总图｜门头、门牌、门体、橱窗、门条与门柱</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/construction-21.webp" data-caption="施工规范｜地弹簧门材料与安装标准"><img loading="lazy" src="门店形象HTML版_assets/examples/construction-21.webp" alt="地弹簧门材料与安装标准"></button><figcaption>门体施工｜地弹簧门材料、尺寸与安装</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/construction-48.webp" data-caption="施工规范｜插座回路、线径与布置示例"><img loading="lazy" src="门店形象HTML版_assets/examples/construction-48.webp" alt="插座回路线径与布置示例"></button><figcaption>电气施工｜插座回路、线径与布置</figcaption></figure>
+      </div>
+      <div class="g2 grid" style="margin-top:18px">
+        <article class="card"><h3>进场与拆除</h3><ul><li>施工前设置安全围挡：75 系镀锌轻钢骨架，间距不大于 600 mm，配 25 mm 铝合金压条，表面平直无褶皱。</li><li>拆除前后分别保留不少于 4 张现场照片。</li><li>垃圾当日清运；拆除完成后重新复尺，并据实校核图纸与设备位置。</li></ul></article>
+        <article class="card"><h3>隔墙与门</h3><ul><li>石膏板隔墙：9 mm 板、75 系龙骨；竖龙骨中心距 400 mm，铝塑板基层时 300 mm。</li><li>自攻钉边部间距 200 mm、板中 300 mm；板缝 5 ±1 mm，墙面平整度 ±3 mm。</li><li>轻质砖墙底部设 200 mm 实心砖 / 混凝土基座，错缝砌筑、灰缝饱满。</li><li>库房门优先采用成品复合门；门扇下缝 6 mm，其余边缝 2 ±0.5 mm。</li></ul></article>
+      </div>
+      <details open><summary>给排水标准</summary><div class="detail-body"><ul><li>食品操作区排水采用 DN50 PVC，给水采用 DN20 PPR。</li><li>排水立管高 200 ±50 mm；咖啡 / 热水设备和水槽分别设置 DN50 排水。</li><li>金属水槽下方设置约 400×250×250 mm 隔油池。</li><li>鲜食与冷链排水分开设置，不共用，不直接排入室外检查井。</li><li>展示柜排水立管高 100 ±50 mm，风幕柜参考 200 ±50 mm；完工后做通水、排水和通风测试。</li></ul></div></details>
+      <details open><summary>强弱电与配电标准</summary><div class="detail-body"><ul><li>收银地面预埋 DN20（6 分 / 25 mm）线管不少于 6 根：网络与监控 2 根、插座 4 根；埋于地砖下，弯管器成弯，不用直角弯头，并预留穿线。</li><li>插座采用德力西，线管采用联塑 / 伟星；一组插座单独一路管线，线路隐藏敷设，弯曲半径不小于管径 6 倍。</li><li>10A：BVR 2×2.5 + 1×1.5 mm²；16A 鲜食 / 空调：BVR 2×4 + 1×2.5 mm²；220V 照明：BVR 2×1.5 + 1×1.5 mm²；220V 设备：BVR 2×4 + 1×2.5 mm²；380V：BVR 4×4 + 1×2.5 mm²。</li><li>收银墙插下沿 900 ±10 mm；冷柜隐藏 10A 插座高 300 mm；咖啡后柜配置 2 个 16A 加 1 个 10A 插座。开关下沿 1300 ±10 mm。</li><li>单相总线：火 / 零 / 地各 10 mm²；三相：三火 / 零 / 地各 6 mm²，必须可靠接地。</li><li>配电箱采用德力西 20 / 40 回路明装箱，设于库房门后，高 1400 ±50 mm；断路器参考 80 / 63 / 40 / 25 / 16 / 10A，各设备分路并标识用途。</li></ul></div></details>
+      <details><summary>地面、门槛与墙面基层</summary><div class="detail-body"><ul><li>地砖选 1200×600 或 800×800 mm 素色哑光砖，使用 325 水泥及 1:3 水泥砂浆铺贴。</li><li>砖缝 2 ±1 mm，相邻高差 ±1 mm；完成面防滑、清洁、无明显空鼓。</li><li>门槛采用黑色 / 素色石材；门内外分界线设置在地弹簧内侧约 50 mm，并尽量与地砖缝对齐。</li><li>墙面完成后保持平整、无污渍、无破损；除标准腰线、指定广告和证照框外不增设杂项。</li></ul></div></details>
+      <details class="source-gallery" data-gallery="construction"><summary>展开装修施工原页图册 <small>门头、防水、门体、围挡、隔墙、水电、地砖、吊顶与设备配合 · 22 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">这些图例来自新增《装修施工规范》，用于施工节点和材料做法参考。</p></details>
+    </section>
+
+    <section class="chapter" id="space">
+      <div class="chapter-head"><div class="num">05 / 空间</div><div><h2>店内空间与关键形象节点</h2><p>空间设计以收银区、冷链区、鲜食 / 休闲区和营业区为核心，完成面尺寸以门店复尺及审批图纸为准。</p></div></div>
+      <div class="key-visuals">
+        <figure class="brand-only" data-brand="left"><button class="image-button" data-full="门店形象HTML版_assets/examples/space-left-5.webp" data-caption="左邻右舍｜收银区域整体配置示例"><img loading="lazy" src="门店形象HTML版_assets/examples/space-left-5.webp" alt="左邻右舍收银区域整体配置示例"></button><figcaption>左邻右舍｜收银区域整体配置</figcaption></figure>
+        <figure class="brand-only" data-brand="life"><button class="image-button" data-full="门店形象HTML版_assets/examples/space-life-5.webp" data-caption="生活驿站｜收银区域整体配置示例"><img loading="lazy" src="门店形象HTML版_assets/examples/space-life-5.webp" alt="生活驿站收银区域整体配置示例"></button><figcaption>生活驿站｜收银区域整体配置</figcaption></figure>
+      </div>
+      <div class="g2 grid">
+        <div><div class="visual" style="margin:0"><img src="门店形象HTML版_assets/收银背景.png" alt="收银背景墙施工标准"><div class="caption">原标准图示｜收银背景墙结构与完成效果</div></div></div>
+        <article class="card"><h3>收银背景墙</h3><ul><li>20×30 木方、15 mm 夹板基层，表面采用 1800×100 mm 竹木纤维波浪板。</li><li>配置 5000K 高亮铝槽灯；墙体离原墙至少 50 mm，满足 DN20 管线隐藏。</li><li>标准高度参考 2800 mm；屏幕、标志、灯带与收银设备居中协调。</li><li>电视广告屏上沿低于收银副吊顶约 50 mm，线路隐藏，屏幕可按约 30°视角安装。</li></ul></article>
+      </div>
+      <div class="g2 grid" style="margin-top:18px">
+        <article class="card"><h3>操作区墙面</h3><ul><li>可用 400×2800×7 mm 或 600×2800×9 mm 米白色竹木纤维 / 护墙板。</li><li>最后一块不足 300 mm 时，应与相邻板重新均分，避免窄条。</li><li>阴阳角及收边使用 0.8 mm 厚、15×15 mm 金属条。</li></ul></article>
+        <article class="card"><h3>主吊顶与休闲区</h3><ul><li>主吊顶采用洁净板 / 600×600 矿棉板，吊杆及主龙骨间距不大于 1200 mm，副龙骨 600 mm，高度约 2800 mm，整体水平偏差不大于 3 mm。</li><li>石膏板吊顶主龙骨起拱 1/200–1/300，端部距墙不大于 300 mm。</li><li>休闲区石膏板完成面约 2700 mm，板缝 5–8 mm，螺钉沉入 0.5–1 mm。</li></ul></article>
+      </div>
+      <div class="visual"><img src="门店形象HTML版_assets/收银吊顶.png" alt="收银吊顶施工标准"><div class="caption">原标准图示｜收银副吊顶结构、造型与灯带关系</div></div>
+      <details open><summary>收银副吊顶</summary><div class="detail-body"><ul><li>20×30 木方、9 / 12 mm 夹板、50 系轻钢龙骨和 4 mm 品牌色铝塑板组合；内侧饰面采用米棕色墙板，配 2010 型灯槽。</li><li>吊杆间距不大于 1000 mm；完成高度按图纸参考 2800 mm，外侧宽度与收银台范围协调。</li><li>层高低于 2600 mm 时取消悬吊灯槽；背景墙或对面墙宽度不足 2400 mm 时，按空间图纸评估是否取消副吊顶造型。</li></ul></div></details>
+      <div class="visual"><img src="门店形象HTML版_assets/冷链封包.png" alt="冷链设备封包施工标准"><div class="caption">原标准图示｜冷链展示柜封包结构</div></div>
+      <details open><summary>冷链展示柜封包</summary><div class="detail-body"><ul><li>柜体就位固定后再封包；采用 20×30 木方、16 mm 木工板，饰面为米白色铝塑板或竹木纤维板，收边用 0.8 mm、15×15 mm 不锈钢条。</li><li>设备背部预留排水与散热距离不小于 50 mm，完成面平整度 ±3 mm。</li><li>顶部至少使用 2 根通长拉杆固定；饰面板分格宽 600–1200 mm。</li><li>侧面检修口在同一施工规范中出现 600×600 mm 与 400×400 mm 两种口径，项目实施前按设备检修需要和最新审批图确认。</li><li>按图设置金属防鼠网；部分设备 / 场景可不做封包，以空间设计文件为准。</li></ul></div></details>
+      <h3 style="margin-top:24px">照明参数</h3>
+      <table class="matrix">
+        <thead><tr><th>区域</th><th>灯具</th><th>功率 / 色温</th><th>光通量 / 照度</th></tr></thead>
+        <tbody>
+          <tr><td>营业区</td><td>T12，120 cm</td><td>24W / 5000K</td><td>3240 lm；地面 900 lux</td></tr>
+          <tr><td>收银区</td><td>嵌入式筒灯 Ø12</td><td>18W / 4000K</td><td>1710 lm；台面 2000 lux</td></tr>
+          <tr><td>收银隐藏灯带</td><td>2010，240 珠灯带</td><td>16W / 5000K</td><td>连续均匀、无明显暗区</td></tr>
+          <tr><td>独立休闲区</td><td>嵌入式筒灯 Ø12</td><td>18W / 4000K</td><td>1710 lm；2000 lux</td></tr>
+          <tr><td>冷链 / 橱窗灯杆</td><td>象鼻灯</td><td>30W / 4000K</td><td>2550 lm；2000 lux</td></tr>
+          <tr><td>普通货架</td><td>筒灯</td><td>18W / 4000K</td><td>1710 lm；1000 lux</td></tr>
+          <tr><td>休闲食品 / 面包</td><td>象鼻灯</td><td>30W / 4000K</td><td>2550 lm；2500 lux</td></tr>
+          <tr><td>店外招牌下</td><td>防水灯</td><td>20W / 5000K</td><td>1800 lm；地面 500 lux</td></tr>
+        </tbody>
+      </table>
+      <div class="visual"><img src="门店形象HTML版_assets/照明参数.png" alt="照明参数原标准表"><div class="caption">原标准图示｜统一灯具参数表</div></div>
+      <div class="key-visuals three">
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/space-left-31.webp" data-caption="营业区域｜整体货架与通道效果"><img loading="lazy" src="门店形象HTML版_assets/examples/space-left-31.webp" alt="营业区域整体货架与通道效果"></button><figcaption>营业区｜整体货架与通道</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/space-left-33.webp" data-caption="冷链区域｜展示柜组合与广告位置"><img loading="lazy" src="门店形象HTML版_assets/examples/space-left-33.webp" alt="冷链展示柜组合与广告位置"></button><figcaption>冷链区｜展示柜组合与广告位置</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/space-left-38.webp" data-caption="休闲区域｜桌椅、墙面和冷链关系"><img loading="lazy" src="门店形象HTML版_assets/examples/space-left-38.webp" alt="休闲区域桌椅墙面和冷链关系"></button><figcaption>休闲区｜桌椅、墙面与设备关系</figcaption></figure>
+      </div>
+      <details class="source-gallery brand-only" data-brand="left" data-gallery="space-left"><summary>展开左邻右舍空间设计原页图册 <small>布局、硬装、收银、营业区与辅助设备 · 27 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">从平面规划到门店各功能区，可逐页放大查看。</p></details>
+      <details class="source-gallery brand-only" data-brand="life" data-gallery="space-life"><summary>展开生活驿站空间设计原页图册 <small>收银、门面、硬装、营业区与辅助设备 · 19 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">展示生活驿站绿色体系下的对应空间做法。</p></details>
+    </section>
+
+    <section class="chapter" id="ads">
+      <div class="chapter-head"><div class="num">06 / 广告</div><div><h2>门店广告发布与陈列</h2><p>所有广告、业务灯箱和店内宣传物必须来自总部授权版本。位置、数量、时效与消防遮挡是共同约束。</p></div></div>
+      <div class="key-visuals">
+        <figure class="brand-only" data-brand="left"><button class="image-button" data-full="门店形象HTML版_assets/examples/ads-left-6.webp" data-caption="左邻右舍｜外立面广告位设置示意"><img loading="lazy" src="门店形象HTML版_assets/examples/ads-left-6.webp" alt="左邻右舍外立面广告位设置示意"></button><figcaption>左邻右舍｜外立面广告位设置</figcaption></figure>
+        <figure class="brand-only" data-brand="life"><button class="image-button" data-full="门店形象HTML版_assets/examples/ads-life-6.webp" data-caption="生活驿站｜外立面广告位设置示意"><img loading="lazy" src="门店形象HTML版_assets/examples/ads-life-6.webp" alt="生活驿站外立面广告位设置示意"></button><figcaption>生活驿站｜外立面广告位设置</figcaption></figure>
+      </div>
+      <div class="g3 grid">
+        <article class="card accent"><h3>外立面</h3><ul><li>除审批广告外，不得自行增加贴纸、灯箱、喷绘或悬挂物。</li><li>整面广告原则上不超过 2 处，其余玻璃按规定使用黑色 / 磨砂膜。</li><li>不得遮挡消防设施、监控、配电箱、疏散标识和通道。</li></ul></article>
+        <article class="card accent"><h3>橱窗 A / B / C 区</h3><ul><li>A 区（门条下）：促销、爆品、新品、增值业务。</li><li>B 区（门条上）：云值守、招聘、加盟、推拉标识。</li><li>C 区（B 区上方）：鲜食、会员主题。</li></ul></article>
+        <article class="card accent"><h3>时效与品质</h3><ul><li>广告须在有效期内，信息与价格准确。</li><li>粘贴平整，无气泡、破损、歪斜和明显污渍。</li><li>到期及时撤除；重大节庆物料原则上于活动结束后 24 小时内撤换。</li></ul></article>
+      </div>
+      <details open><summary>外立面广告位置条件</summary><div class="detail-body"><ul><li>梁体高度大于 0.3 m 且不与招牌处于同一平面时，可按审批图设置副广告位。</li><li>推门上方固定玻璃高度大于 0.3 m、宽度大于 1.6 m 时，可作为指定广告位置。</li><li>墙面 / 柱面可用宽度大于 0.8 m 时，广告底边距地约 0.8 m、顶边距吊顶约 0.4 m，并避让门牌、灯箱及导视。</li><li>鲜食店使用鲜食主题画面；休闲区橱窗下部使用品牌点阵；无鲜食或景区门店按批准的非鲜食 / 城市插画版本。</li></ul></div></details>
+      <details><summary>店内允许的广告载体</summary><div class="detail-body">收银灯箱、烟柜、POS 设备、鲜食设备、冷链设备、磁吸灯箱、货架 KT 板 / 价签 / 插卡、休闲区画框海报及桌贴。载体尺寸、画面和安装方式均按对应广告或设备文件执行。</div></details>
+      <details><summary>小灯箱设置</summary><div class="detail-body"><ul><li>同一外立面只保留一种同类小灯箱，同一基层平面原则上一块；正装、侧装或吊装按现场条件选用。</li><li>正装所需柱面宽度不小于 0.4 m，灯箱宽度不超过柱面宽度，底边距地不低于 1.5 m；侧装 / 吊装底边距地不低于 2 m。</li><li>灯箱内容须经授权。施工规范中个别尺寸单位表达不完整时，不自行推定，以正式制作图为准。</li></ul></div></details>
+      <div class="key-visuals three">
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/ads-left-16.webp" data-caption="店内广告｜收银区允许载体与陈列示例"><img loading="lazy" src="门店形象HTML版_assets/examples/ads-left-16.webp" alt="收银区广告载体陈列示例"></button><figcaption>收银区｜允许载体与陈列位置</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/ads-left-18.webp" data-caption="店内广告｜冷链区域磁吸灯箱与画面位置"><img loading="lazy" src="门店形象HTML版_assets/examples/ads-left-18.webp" alt="冷链区域磁吸灯箱与画面位置"></button><figcaption>冷链区｜设备广告与磁吸灯箱</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/ads-left-20.webp" data-caption="店内广告｜休闲区墙面、画框与桌贴示例"><img loading="lazy" src="门店形象HTML版_assets/examples/ads-left-20.webp" alt="休闲区墙面画框与桌贴示例"></button><figcaption>休闲区｜墙面画框与桌贴</figcaption></figure>
+      </div>
+      <details class="source-gallery brand-only" data-brand="left" data-gallery="ads-left"><summary>展开左邻右舍广告原页图册 <small>外立面点位、小灯箱、收银、冷链、货架与休闲区 · 16 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">包含可张贴位置、禁止区域和各类载体示意。</p></details>
+      <details class="source-gallery brand-only" data-brand="life" data-gallery="ads-life"><summary>展开生活驿站广告原页图册 <small>外立面点位、小灯箱、收银、冷链、货架与休闲区 · 16 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">包含可张贴位置、禁止区域和各类载体示意。</p></details>
+      <h3 style="margin-top:26px">广告执行一页式原图</h3>
+      <div class="key-visuals">
+        <figure class="brand-only" data-brand="left"><button class="image-button" data-full="门店形象HTML版_assets/examples/adexec-left-1.webp" data-caption="左邻右舍｜门店广告执行标准一页式原图"><img loading="lazy" src="门店形象HTML版_assets/examples/adexec-left-1.webp" alt="左邻右舍门店广告执行标准一页式原图"></button><figcaption>左邻右舍｜广告执行标准一页式原图</figcaption></figure>
+        <figure class="brand-only" data-brand="life"><button class="image-button" data-full="门店形象HTML版_assets/examples/adexec-life-1.webp" data-caption="生活驿站｜门店广告执行标准一页式原图"><img loading="lazy" src="门店形象HTML版_assets/examples/adexec-life-1.webp" alt="生活驿站门店广告执行标准一页式原图"></button><figcaption>生活驿站｜广告执行标准一页式原图</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="chapter" id="equipment">
+      <div class="chapter-head"><div class="num">07 / 设备</div><div><h2>设备与道具配置索引</h2><p>设备型号随业态和门店面积组合。以下展示通用类别、典型尺寸与施工配合要求，最终清单以对应品牌《设备手册》和项目配置表为准。</p></div></div>
+      <div class="key-visuals three">
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/equipment-left-12.webp" data-caption="设备手册｜6.0 货架整体配置与规格"><img loading="lazy" src="门店形象HTML版_assets/examples/equipment-left-12.webp" alt="6.0货架整体配置与规格"></button><figcaption>货架｜6.0 整体配置与规格</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/equipment-left-32.webp" data-caption="设备手册｜鲜食设备组合、型号与功率"><img loading="lazy" src="门店形象HTML版_assets/examples/equipment-left-32.webp" alt="鲜食设备组合型号与功率"></button><figcaption>鲜食设备｜组合、型号与功率</figcaption></figure>
+        <figure><button class="image-button" data-full="门店形象HTML版_assets/examples/equipment-left-38.webp" data-caption="设备手册｜冷链展示柜组合方式"><img loading="lazy" src="门店形象HTML版_assets/examples/equipment-left-38.webp" alt="冷链展示柜组合方式"></button><figcaption>冷链设备｜展示柜组合方式</figcaption></figure>
+      </div>
+      <div class="g3 grid">
+        <article class="card"><h3>货架</h3><p>单面 935×413×2000；双面 930×766×1500；端头 935×400×1500；重型 935×413×2000；休闲食品 1000×800×1400；水果 930×900×1300；散装 930×920×1300 mm。</p></article>
+        <article class="card"><h3>收银台</h3><p>常用模块：600×600×800、转角 600×600×800、边柜 400×600×800 mm。组合需同步考虑 POS、烟柜、购物袋、线槽与顾客通行。</p></article>
+        <article class="card"><h3>冷链与鲜食</h3><p>包括风幕柜、冷藏 / 冷冻展示柜、岛柜、鲜食操作台、烤制与热食设备。预留独立电路、给排水、散热、检修与防鼠措施。</p></article>
+      </div>
+      <div class="g2 grid" style="margin-top:16px">
+        <article class="card soft"><h3>空调与空气幕</h3><ul><li>天花空调参考 5HP，机体约 840×840×320 mm，检修与回风空间不小于 300 mm。</li><li>吊顶空间仅约 250 mm 时，按图改用风管机方案；冷凝水独立排放，外机保持通风。</li><li>空气幕与入口宽度、门体形式配套，线路隐藏。</li></ul></article>
+        <article class="card soft"><h3>弱电、显示与音响</h3><ul><li>监控线路隐藏，摄像范围覆盖入口、收银、货架通道和重点设备。</li><li>音响每台独立布线，吊顶内固定。</li><li>广告屏、POS、网络设备预留独立强弱电，避免与大功率设备共路干扰。</li></ul></article>
+      </div>
+      <div class="visual"><img src="门店形象HTML版_assets/磁吸灯箱.png" alt="冷链磁吸灯箱标准"><div class="caption">原标准图示｜冷链磁吸灯箱尺寸、供电与安装关系</div></div>
+      <details open><summary>冷链磁吸灯箱</summary><div class="detail-body"><ul><li>参考尺寸 300×700 mm；使用 1.5 mm² 电缆穿 Ø20 PVC 管。</li><li>配置单极 16A 开关 / 控制，预留出线约 100 mm；同一排灯箱底边高度一致。</li><li>画面为总部统一授权版本，安装位置与冷柜门、检修和商品陈列不冲突。</li></ul></div></details>
+      <details><summary>证照、标识与辅助设备</summary><div class="detail-body"><ul><li>证照框上沿参考 2200 mm，排列整齐、内容有效。</li><li>收银台迷你发光字距边缘约 200 mm，居中并隐藏线路。</li><li>驱虫灯上沿参考 2200 mm，线路隐藏且不正对门窗；迎宾器可安装在入口左 / 右 1.2–1.5 m 处或门顶。</li><li>排风设备按图纸和实际业态设置；这些辅助项属于条件配置。</li></ul></div></details>
+      <details class="source-gallery brand-only" data-brand="left" data-gallery="equipment-left"><summary>展开左邻右舍设备手册图册 <small>招牌、门贴、收银、货架、鲜食、冷链、空调与灯具 · 21 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">用于快速识别设备外观、典型尺寸、型号和配套条件。</p></details>
+      <details class="source-gallery brand-only" data-brand="life" data-gallery="equipment-life"><summary>展开生活驿站设备手册图册 <small>招牌、门贴、收银、货架、鲜食、冷链、空调与灯具 · 21 页</small></summary><div class="thumb-grid"></div><p class="gallery-hint">用于快速识别设备外观、典型尺寸、型号和配套条件。</p></details>
+    </section>
+
+    <section class="chapter" id="exceptions">
+      <div class="chapter-head"><div class="num">08 / 特殊项</div><div><h2>条件配置与版本口径提醒</h2><p>本章专门收纳不适用于所有门店、需审批或原文件存在不同口径的内容，避免把条件项误解为统一固定值。</p></div></div>
+      <div class="g2 grid">
+        <article class="card"><span class="tag need">按需</span><h3>条件配置</h3><ul><li>自动门：标准版推荐，非强制。</li><li>驱虫灯、迎宾器、排风、空气幕：按业态、门体和现场条件配置。</li><li>鲜食设备、咖啡 / 热水、烘焙、休闲区：按门店经营模块配置。</li><li>外立面副广告、小灯箱画面：须符合位置条件并经授权。</li><li>特殊消防、建筑和物业条件优先满足属地法规与审批要求。</li></ul></article>
+        <article class="card"><span class="tag diff">需定版</span><h3>文件间差异</h3><ul><li>门头最小组合长度：装修施工规范为左邻右舍 3000 mm、生活驿站 2900 mm；较早导视文件另有左邻右舍 3300 mm、生活驿站 2300 mm 口径。</li><li>冷链侧检修口：同一施工规范出现 600×600 mm 与 400×400 mm。</li><li>照明色温：统一参数表为营业区 5000K、收银 / 休闲 4000K；左邻右舍部分说明页出现 4500K / 3500K。</li><li>门牌与门条高度在不同图示中存在表达差异，应按最新制作 / 安装图确认。</li></ul></article>
+      </div>
+      <div class="notice"><b>执行建议：</b>出现差异时，不自行折中。优先级建议为：项目最新审批图 / 最新书面通知 → 2026 年 7 月新增装修施工规范 → 店招导视与广告专项规范 → 空间设计规范 → 设备与 VI 手册。涉及尺寸冲突时由品牌形象管理部门书面定版。</div>
+    </section>
+
+    <section class="chapter" id="sources">
+      <div class="chapter-head"><div class="num">09 / 来源</div><div><h2>本页面所依据的标准文件</h2><p>共纳入 15 份原始标准资料。文件夹内由本项目先前生成的汇总文档不作为标准来源。</p></div></div>
+      <ol class="source-list">
+        <li>生活驿站6.0终端形象识别系统-装修施工规范.pdf</li>
+        <li>左邻右舍6.0终端形象识别系统-装修施工规范.pdf</li>
+        <li>生活驿站视觉识别规范-6.0-2026.pdf</li>
+        <li>左邻右舍视觉识别规范-6.0-2026.pdf</li>
+        <li>生活驿站6.0终端形象识别系统-空间设计规范.pptx</li>
+        <li>左邻右舍6.0终端形象识别系统-空间设计规范.pptx</li>
+        <li>生活驿站6.0终端形象识别系统-门店广告标准-2026-4-6.pptx</li>
+        <li>左邻右舍6.0终端形象识别系统-门店广告标准-2026-4-6.pptx</li>
+        <li>门店广告执行标准-生活驿站.pdf</li>
+        <li>门店广告执行标准-左邻右舍.pdf</li>
+        <li>生活驿站6.0终端形象识别系统-店招导视规范-7-23.pptx</li>
+        <li>左邻右舍6.0终端形象识别系统-店招导视规范-7.25.pptx</li>
+        <li>2026招牌标准-新版-8.3.cdr</li>
+        <li>生活驿站6.0形象《设备手册》(1).pdf</li>
+        <li>左邻右舍6.0形象《设备手册》(1).pdf</li>
+      </ol>
+      <div class="note" style="margin-top:22px"><b>阅读说明：</b>本手册用于集中展示标准和快速查阅。生产下单、施工放样及设备采购仍应回到原始矢量文件、审批图纸和设备清单确认，以免页面摘要替代正式制作文件。</div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>门店形象 6.0 · 图文标准手册</span><span>资料版本：2026 年度文件夹汇编</span></div></footer>
+  <dialog class="lightbox" id="image-lightbox">
+    <button class="lightbox-close" type="button" aria-label="关闭大图">×</button>
+    <img src="" alt="">
+    <p></p>
+  </dialog>
+  <script>
+    const buttons=[...document.querySelectorAll('.brand-btn')];
+    buttons.forEach(button=>button.addEventListener('click',()=>{
+      document.body.dataset.brand=button.dataset.filter;
+      buttons.forEach(item=>item.classList.toggle('active',item===button));
+      const colors={all:'#1f8f4b',left:'#e60012',life:'#21b354'};
+      document.documentElement.style.setProperty('--brand',colors[button.dataset.filter]);
+    }));
+
+    const galleryConfig={
+      'vi-left':{label:'左邻右舍 VI',kind:'页',numbers:[3,7,10,14,17,19,23,27]},
+      'vi-life':{label:'生活驿站 VI',kind:'页',numbers:[2,3,4,6,10,11,13,14,15,18,20]},
+      'sign-left':{label:'左邻右舍店招导视',kind:'页',numbers:[3,4,6,9,10,14,16,17,18,20]},
+      'sign-life':{label:'生活驿站店招导视',kind:'页',numbers:[3,4,6,9,10,14,16,17,18,20]},
+      'space-left':{label:'左邻右舍空间设计',kind:'页',numbers:[4,5,6,7,14,15,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38]},
+      'space-life':{label:'生活驿站空间设计',kind:'页',numbers:[5,6,8,14,15,16,17,25,26,27,28,31,32,33,34,35,36,37,38]},
+      'ads-left':{label:'左邻右舍广告标准',kind:'页',numbers:[5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,22]},
+      'ads-life':{label:'生活驿站广告标准',kind:'页',numbers:[5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,22]},
+      'equipment-left':{label:'左邻右舍设备手册',kind:'页',numbers:[2,7,8,10,11,12,17,18,23,27,32,35,38,45,52,53,55,56,57,58,59]},
+      'equipment-life':{label:'生活驿站设备手册',kind:'页',numbers:[2,7,8,10,11,12,17,18,23,27,32,35,38,45,52,53,55,56,57,58,59]},
+      'construction':{label:'装修施工规范',kind:'页',numbers:[6,7,9,15,16,21,24,31,35,42,46,48,54,56,66,72,76,77,80,81,84,86]}
+    };
+    const titleMaps={
+      'vi-left':{3:'品牌概述与门店形象',7:'标志释义',10:'标准制图',14:'标志背景色应用',17:'品牌标准色',19:'品牌字体',23:'品牌辅助图形应用',27:'促销画面应用'},
+      'vi-life':{2:'品牌概述与门店形象',3:'品牌服务形象',4:'品牌核心关键词',6:'便利场景',10:'标志释义',11:'标志标准制图',13:'标准色',14:'辅助色',15:'标准用色组合',18:'辅助图形系统',20:'辅助图形广告应用'},
+      sign:{3:'常规门店招牌总览',4:'标准门面设施标注',6:'吸塑招牌安装规范',9:'3M 灯箱招牌',10:'特殊招牌类型',14:'小灯箱设置',16:'发光字招牌',17:'发光字基层与结构',18:'发光字排列组合',20:'特殊商圈招牌示例'},
+      space:{4:'平面布局图',5:'收银区域',6:'营业区域',7:'仓储区域',8:'门店招牌',14:'出入口、橱窗与门柱',15:'门条与门牌',16:'外立面广告设置一',17:'外立面广告设置二',18:'墙面与地面工程',19:'吊顶工程',20:'照明工程',21:'空调与音响',22:'线路工程',23:'配电控制',24:'给排水工程',25:'收银区域注解',26:'收银区域硬装',27:'收银背景发光字',28:'收银咖啡形象',29:'收银陈列设备',30:'鲜食设备',31:'营业区域总览',32:'货架配置',33:'冷链设备',34:'证照框',35:'灭虫灯',36:'迎宾器',37:'营业区广告框',38:'休闲区配置'},
+      ads:{5:'门店广告点位规划',6:'外立面广告位置一',7:'外立面广告位置二',8:'外立面整面广告',9:'可用墙面与柱面',10:'A/B/C 广告分区',11:'云值守物料位置',13:'小灯箱类型',14:'小灯箱安装位置',15:'小灯箱应用示例',16:'店内广告位总览',17:'收银区广告',18:'冷链区广告',19:'货架区广告',20:'休闲区广告',22:'标准化物料张贴指南'},
+      equipment:{2:'双面吸塑灯箱',7:'店招小灯箱',8:'门牌、门条与推拉字',10:'室内发光字',11:'收银台',12:'货架总表',17:'零食货架',18:'水果货架',23:'辅助陈列架',27:'收银 POS',32:'鲜食设备',35:'雪糕柜与子母柜',38:'冷链展示柜',45:'风幕柜',52:'冷冻柜',53:'吸顶空调',55:'商用显示屏',56:'磁吸灯箱',57:'照明灯具',58:'灭虫灯与迎宾器',59:'休闲桌椅'},
+      construction:{6:'标准店铺门面示意',7:'标准门店设施标注',9:'招牌背景打底',15:'树脂瓦防水挑檐',16:'铝塑板防水挑檐',21:'地弹簧门',24:'门牌与门条',31:'施工围挡',35:'石膏板隔墙',42:'熟食给排水',46:'收银强弱电预埋',48:'插座线路与线径',54:'配电箱',56:'地砖铺设',66:'矿棉板与洁净板吊顶',72:'灯光分层与重点照明',76:'证照框',77:'收银广告屏',80:'灭虫灯',81:'迎宾器',84:'监控',86:'吸顶空调'}
+    };
+    function titleFor(group,number){
+      if(titleMaps[group]?.[number]) return titleMaps[group][number];
+      if(group.startsWith('sign-')) return titleMaps.sign[number]||'';
+      if(group.startsWith('space-')) return titleMaps.space[number]||'';
+      if(group.startsWith('ads-')) return titleMaps.ads[number]||'';
+      if(group.startsWith('equipment-')) return titleMaps.equipment[number]||'';
+      return titleMaps.construction[number]||'';
+    }
+    function renderGallery(details){
+      if(details.dataset.rendered) return;
+      const group=details.dataset.gallery,config=galleryConfig[group],grid=details.querySelector('.thumb-grid');
+      grid.innerHTML=config.numbers.map(number=>{
+        const src=`门店形象HTML版_assets/examples/${group}-${number}.webp`;
+        const caption=`${config.label}｜${titleFor(group,number)}（原文件第 ${number} ${config.kind}）`;
+        return `<figure class="thumb-card"><button class="image-button" data-full="${src}" data-caption="${caption}"><img loading="lazy" src="${src}" alt="${caption}"></button><figcaption>${caption}</figcaption></figure>`;
+      }).join('');
+      details.dataset.rendered='true';
+    }
+    document.querySelectorAll('.source-gallery').forEach(details=>details.addEventListener('toggle',()=>{if(details.open)renderGallery(details)}));
+
+    const lightbox=document.getElementById('image-lightbox'),lightboxImage=lightbox.querySelector('img'),lightboxCaption=lightbox.querySelector('p');
+    document.addEventListener('click',event=>{
+      const opener=event.target.closest('.image-button');
+      if(!opener)return;
+      lightboxImage.src=opener.dataset.full;
+      lightboxImage.alt=opener.dataset.caption||'';
+      lightboxCaption.textContent=opener.dataset.caption||'';
+      lightbox.showModal();
+    });
+    lightbox.querySelector('.lightbox-close').addEventListener('click',()=>lightbox.close());
+    lightbox.addEventListener('click',event=>{if(event.target===lightbox)lightbox.close()});
+    window.addEventListener('beforeprint',()=>document.querySelectorAll('.source-gallery').forEach(details=>{renderGallery(details);details.open=true}));
+  </script>
+</body>
+</html>
